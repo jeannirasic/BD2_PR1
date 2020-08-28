@@ -503,7 +503,181 @@ INSERT INTO USER_ALL.PERSONA(nombre_persona, id_pais_persona) VALUES('James Spad
 --=============================================INSERCION EN PELICULA_PERSONA====================================================
 --==============================================================================================================================
 
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(2,1,1);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(2,2,1);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,3,1);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,4,1);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,5,1);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,6,1);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,7,1);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,8,1);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,9,1);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,10,1);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,11,1);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,12,1);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,13,1);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,14,1);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,15,1);
 
+
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(2,16,2);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,17,2);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,18,2);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,19,2);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,20,2);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,21,2);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,22,2);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,23,2);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,24,2);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,25,2);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,26,2);
+
+
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(2,16,3);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,27,3);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,28,3);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,29,3);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,30,3);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,31,3);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,32,3);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,33,3);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,34,3);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,35,3);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,36,3);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,37,3);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,38,3);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,39,3);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,40,3);
+
+
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(2,41,4);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,42,4);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,43,4);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,44,4);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,45,4);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,46,4);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,47,4);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,48,4);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,49,4);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,50,4);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,51,4);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,52,4);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,53,4);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,54,4);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,55,4);
+
+
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(2,1,5);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(2,2,5);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,3,5);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,4,5);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,5,5);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,6,5);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,7,5);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,9,5);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,56,5);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,57,5);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,58,5);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,18,5);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,12,5);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,59,5);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,60,5);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,61,5);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,62,5);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,63,5);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,64,5);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,65,5);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,66,5);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,67,5);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,68,5);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,69,5);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,70,5);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,13,5);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,14,5);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,71,5);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,15,5);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,72,5);
+
+
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(2,73,6);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,72,6);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,74,6);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,75,6);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,76,6);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,77,6);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,78,6);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,79,6);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,80,6);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,81,6);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,82,6);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,83,6);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,84,6);
+
+
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(2,85,7);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,86,7);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,87,7);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,88,7);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,89,7);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,90,7);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,91,7);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,92,7);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,93,7);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,94,7);
+
+
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(2,95,8);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,3,8);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,4,8);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,5,8);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,6,8);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,7,8);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,8,8);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,59,8);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,96,8);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,97,8);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,98,8);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,99,8);
+
+
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(2,100,9);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,70,9);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,101,9);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,102,9);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,103,9);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,20,9);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,104,9);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,105,9);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,106,9);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,107,9);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,108,9);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,109,9);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,110,9);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,111,9);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,112,9);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,113,9);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,114,9);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,115,9);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,116,9);
+
+
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(2,95,10);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,3,10);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,4,10);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,5,10);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,6,10);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,7,10);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,8,10);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,9,10);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,117,10);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,61,10);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,60,10);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,97,10);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,62,10);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,118,10);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,98,10);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,119,10);
+INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk)VALUES(1,99,10);
 
 
 
