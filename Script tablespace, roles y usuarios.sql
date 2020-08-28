@@ -36,7 +36,9 @@ SELECT * FROM DBA_ROLES;
 --Ver todos los permisos existentes
 SELECT * FROM SYSTEM_PRIVILEGE_MAP;
 
---Creo el primer rol
+--====================================================
+--===============Creo el primer rol===================
+--====================================================
 CREATE ROLE ROLE_ALL; --creación de objetos de bases de datos y modificación de datos
 --Le doy los permisos a ese rol
 GRANT CREATE SESSION TO ROLE_ALL;
@@ -62,17 +64,14 @@ GRANT DROP ANY VIEW TO ROLE_ALL;
 GRANT EXECUTE ANY PROCEDURE TO ROLE_ALL;
 GRANT UPDATE ANY TABLE TO ROLE_ALL;
 
-
-
-
-
-
 --Ver los permisos del rol
 SELECT * FROM DBA_SYS_PRIVS
 WHERE GRANTEE = 'ROLE_ALL';
 
 
---Creo el segundo rol
+--====================================================
+--================Creo el segundo rol=================
+--====================================================
 CREATE ROLE ROLE_READ_ONLY;--permiso solo de lectura 
 --Le doy los permisos a ese rol
 GRANT CREATE SESSION TO ROLE_READ_ONLY;
@@ -86,9 +85,9 @@ SELECT * FROM DBA_SYS_PRIVS
 WHERE GRANTEE = 'ROLE_READ_ONLY';
 
 
-
-
---Creo el tercer rol
+--====================================================
+--================Creo el tercer rol==================
+--====================================================
 CREATE ROLE ROLE_CUD; --permisos de inserción, eliminación y modificación de datos 
 --Le doy los permisos a ese rol
 GRANT CREATE SESSION TO ROLE_CUD;
@@ -106,8 +105,8 @@ GRANT DROP ANY TABLE TO ROLE_CUD;
 GRANT DROP ANY TRIGGER TO ROLE_CUD;
 GRANT DROP ANY VIEW TO ROLE_CUD;
 GRANT EXECUTE ANY PROCEDURE TO ROLE_CUD;
+GRANT INSERT ANY TABLE TO ROLE_CUD;
 GRANT UPDATE ANY TABLE TO ROLE_CUD;
-
 
 
 --Ver los permisos del rol
@@ -131,28 +130,37 @@ SELECT * FROM SESSION_ROLES;
 --Ver las tablas asociadas al usuario
 SELECT * FROM USER_TABLES;
 
-
---Creo el primer usuario
+--====================================================
+--=============Creo el primer usuario=================
+--====================================================
 CREATE USER USER_ALL IDENTIFIED BY "bases2"
 DEFAULT TABLESPACE "PRACTICA1" TEMPORARY TABLESPACE "TEMP";
+
+--Le doy espacio en el tablespace
+GRANT UNLIMITED TABLESPACE TO USER_ALL;
 
 --Le asigno el rol al primer usuario
 GRANT ROLE_ALL TO USER_ALL;
 
 
---Creo el segundo usuario
+--====================================================
+--============Creo el segundo usuario=================
+--====================================================
 CREATE USER USER_READ_ONLY IDENTIFIED BY "bases2"
 DEFAULT TABLESPACE "PRACTICA1" TEMPORARY TABLESPACE "TEMP";
 
 --Le asigno el rol al segundo usuario
 GRANT ROLE_READ_ONLY TO USER_READ_ONLY;
 
-
---Creo el tercer usuario
+--====================================================
+--=============Creo el tercer usuario=================
+--====================================================
 CREATE USER USER_CUD IDENTIFIED BY "bases2"
 DEFAULT TABLESPACE "PRACTICA1" TEMPORARY TABLESPACE "TEMP";
 
 --Le asigno el rol al tercer usuario
 GRANT ROLE_CUD TO USER_CUD;
+
+GRANT UNLIMITED TABLESPACE TO USER_CUD;
 
 
