@@ -76,6 +76,7 @@ CREATE TABLE PELICULA_PERSONA(
     id_rol_fk NUMBER NOT NULL,
     id_persona_fk NUMBER NOT NULL,
     id_pelicula_fk NUMBER NOT NULL,
+    nombre_personaje VARCHAR(100) NULL,
     PRIMARY KEY(id_rol_fk, id_persona_fk, id_pelicula_fk),
     CONSTRAINT fk_id_rol FOREIGN KEY (id_rol_fk) REFERENCES ROL(id_rol),
     CONSTRAINT fk_id_persona FOREIGN KEY(id_persona_fk) REFERENCES PERSONA(id_persona),
