@@ -114,13 +114,6 @@ INSERT INTO USER_ALL.PELICULA_GENERO (id_pelicula_fk, id_genero_fk) VALUES(10, 1
 INSERT INTO USER_ALL.PELICULA_GENERO (id_pelicula_fk, id_genero_fk) VALUES(10, 2);
 INSERT INTO USER_ALL.PELICULA_GENERO (id_pelicula_fk, id_genero_fk) VALUES(10, 7);
 
---==============================================================================================================================
---=================================================INSERCION EN CARTELERA=======================================================
---==============================================================================================================================
-INSERT INTO USER_ALL.CARTELERA (hora_inicio, hora_fin, fecha, num_sala_cartelera, id_pelicula_cartelera)
-VALUES(TO_TIMESTAMP('01-Jan-00 08:00:00 AM'), TO_TIMESTAMP('01-Jan-00 11:00:00 AM'), TO_DATE('27-08-2020', 'dd-mm-yyyy'), 1, 1);
-
-
 
 --==============================================================================================================================
 --===================================================INSERCION EN PAIS==========================================================
@@ -680,5 +673,5 @@ INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk, 
 INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk, nombre_personaje)VALUES(1,99,10, 'Coronel Nick Fury');
 
 
-
+COMMIT;
 

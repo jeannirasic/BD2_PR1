@@ -1,7 +1,4 @@
-EXEC USER_ALL.INS_CARTELERA(1,1, TO_TIMESTAMP('01-01-00 10:30:00 AM'), TO_TIMESTAMP('01-01-00 10:45:00 AM'), '1-1-2020');
-
-
-select * from cartelera;
+--select * from USER_ALL.CARTELERA;
 
 
 CREATE OR REPLACE PROCEDURE USER_ALL.INS_CARTELERA
@@ -35,4 +32,7 @@ begin
 VALUES(hInicio, hFinal, laFecha, nSala, nPelicula);
     end if;
 end;    
+
+
+--DROP PROCEDURE USER_ALL.INS_CARTELERA;
 

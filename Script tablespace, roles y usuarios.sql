@@ -4,37 +4,42 @@ alter session set "_ORACLE_SCRIPT"=true;
 --TODO LO RELACIONADO CON LOS TABLESPACE----------------------------------------------------------------------------------------
 --Crear tablespace
 CREATE TABLESPACE "PRACTICA1" LOGGING
-DATAFILE '/opt/oracle/oradata/XE/data-practica1.dbf' SIZE 100M
+DATAFILE '/opt/oracle/oradata/XE/datafile-practica1.dbf' SIZE 200M
 EXTENT MANAGEMENT LOCAL SEGMENT SPACE MANAGEMENT AUTO;
 
 --Obtener todos los tablespace
-SELECT * FROM DBA_TABLESPACES;
+--SELECT * FROM DBA_TABLESPACES;
 
 --Actualizar tablespace
-ALTER DATABASE 
+/*ALTER DATABASE 
 DATAFILE '/opt/oracle/oradata/XE/data-practica1.dbf'
-RESIZE 200M;
+RESIZE 200M;*/
 
 --Borrar un tablespace
-DROP TABLESPACE Nombre
-INCLUDING CONTENTS
-CASCADE CONSTRAINTS;
+/*DROP TABLESPACE PRACTICA1
+INCLUDING CONTENTS AND DATAFILES
+CASCADE CONSTRAINTS;*/
 
 --Obtener la ubicacion de los archivos del tablespace
-SELECT * 
+/*SELECT * 
 FROM DBA_DATA_FILES
-ORDER BY TABLESPACE_NAME;
+ORDER BY TABLESPACE_NAME;*/
 
 --Muestra el espacio libre que hay en cada tablespace
-SELECT * 
-FROM DBA_FREE_SPACE;
+/*SELECT * 
+FROM DBA_FREE_SPACE;*/
+
+--Eliminar un datafile
+/*ALTER DATABASE TEMPFILE '/opt/oracle/oradata/XE/datafile-practica1.dbf' DROP 
+INCLUDING DATAFILES;*/
+
 
 
 --TODO LO RELACIONADOS CON LOS ROLES--------------------------------------------------------------------------------------------
 --Ver los roles existentes
-SELECT * FROM DBA_ROLES;
+--SELECT * FROM DBA_ROLES;
 --Ver todos los permisos existentes
-SELECT * FROM SYSTEM_PRIVILEGE_MAP;
+--SELECT * FROM SYSTEM_PRIVILEGE_MAP;
 
 --====================================================
 --===============Creo el primer rol===================
@@ -65,8 +70,8 @@ GRANT EXECUTE ANY PROCEDURE TO ROLE_ALL;
 GRANT UPDATE ANY TABLE TO ROLE_ALL;
 
 --Ver los permisos del rol
-SELECT * FROM DBA_SYS_PRIVS
-WHERE GRANTEE = 'ROLE_ALL';
+/*SELECT * FROM DBA_SYS_PRIVS
+WHERE GRANTEE = 'ROLE_ALL';*/
 
 
 --====================================================
@@ -81,8 +86,8 @@ GRANT SELECT ANY TRANSACTION TO ROLE_READ_ONLY;
 
 
 --Ver los permisos del rol
-SELECT * FROM DBA_SYS_PRIVS
-WHERE GRANTEE = 'ROLE_READ_ONLY';
+/*SELECT * FROM DBA_SYS_PRIVS
+WHERE GRANTEE = 'ROLE_READ_ONLY';*/
 
 
 --====================================================
@@ -110,34 +115,33 @@ GRANT UPDATE ANY TABLE TO ROLE_CUD;
 
 
 --Ver los permisos del rol
-SELECT * FROM DBA_SYS_PRIVS
-WHERE GRANTEE = 'ROLE_CUD';
+/*SELECT * FROM DBA_SYS_PRIVS
+WHERE GRANTEE = 'ROLE_CUD';*/
 
 
 --Eliminar roles creados
--- DROP ROLE ROLE_ALL;
--- DROP ROLE ROLE_READ_ONLY;
--- DROP ROLE ROLE_CUD;
+/*DROP ROLE ROLE_ALL;
+DROP ROLE ROLE_READ_ONLY;
+DROP ROLE ROLE_CUD;*/
 
 
 
 
 --TODO LO RELACIONADO CON LOS USUARIOS-----------------------------------------------------------------------------------------
 --Ver los roles a los que esta ligado cada usuario
-SELECT * FROM DBA_ROLE_PRIVS;
+--SELECT * FROM DBA_ROLE_PRIVS;
 --Ver los roles asignados al usuario logueado
-SELECT * FROM SESSION_ROLES;
+--SELECT * FROM SESSION_ROLES;
 --Ver las tablas asociadas al usuario
-SELECT * FROM USER_TABLES;
+--SELECT * FROM USER_TABLES;
 
 --====================================================
 --=============Creo el primer usuario=================
 --====================================================
 CREATE USER USER_ALL IDENTIFIED BY "bases2"
-DEFAULT TABLESPACE "PRACTICA1" TEMPORARY TABLESPACE "TEMP";
+DEFAULT TABLESPACE "PRACTICA1" TEMPORARY TABLESPACE "TEMP"
+QUOTA UNLIMITED ON "PRACTICA1";
 
---Le doy espacio en el tablespace
-GRANT UNLIMITED TABLESPACE TO USER_ALL;
 
 --Le asigno el rol al primer usuario
 GRANT ROLE_ALL TO USER_ALL;
@@ -156,11 +160,17 @@ GRANT ROLE_READ_ONLY TO USER_READ_ONLY;
 --=============Creo el tercer usuario=================
 --====================================================
 CREATE USER USER_CUD IDENTIFIED BY "bases2"
-DEFAULT TABLESPACE "PRACTICA1" TEMPORARY TABLESPACE "TEMP";
+DEFAULT TABLESPACE "PRACTICA1" TEMPORARY TABLESPACE "TEMP"
+QUOTA UNLIMITED ON "PRACTICA1";
 
 --Le asigno el rol al tercer usuario
 GRANT ROLE_CUD TO USER_CUD;
 
-GRANT UNLIMITED TABLESPACE TO USER_CUD;
+
+
+/*DROP USER USER_ALL CASCADE;
+DROP USER USER_READ_ONLY CASCADE;
+DROP USER USER_CUD CASCADE;*/
+
 
 
