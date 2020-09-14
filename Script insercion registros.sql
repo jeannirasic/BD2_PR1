@@ -672,6 +672,35 @@ INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk, 
 INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk, nombre_personaje)VALUES(1,119,10, 'Ultrón');
 INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk, nombre_personaje)VALUES(1,99,10, 'Coronel Nick Fury');
 
+--==============================================================================================================================
+--=============================================INSERCION DE LAS PROMOCIONES=====================================================
+--==============================================================================================================================
+--0=normal, 1=descuento, 2=promocion
+INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('Precio normal',0,0,0);
+INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('Precio 2x1',1,50,0);
+INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('2 gaseosas por Q15.00',2,0,25);
+INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('Combo amigos por Q50.00',2,0,50);
+INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('Combo Avengers por Q75.00',2,0,75);
+INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('Popcorns + 2 gaseosas por Q40.00',2,0,40);
+INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('2x1 al pagar con Club BI',1,50,0);
+INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('2 gaseosas por Q10.00 con tarjeta Cinepolis',2,0,10);
+INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('Combo amigos por Q35.00 con Club BI',2,0,35);
+INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('Combo Avengers por Q50.00 con tarjeta Cinepolis',2,0,50);
+INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('Popcorns + 2 gaseosas por Q20.00 con Club BI',2,0,20);
+INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('20% de descuento en la compra de 3 entradas',1,20,0);
+INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('25% de descuento en la compra de 4 entradas',1,25,0);
+INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('15% de descuento al pagar con Club BI',1,15,0);
+INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('Descuento friends, 35% al presentar tarjeta Cinepolis',1,35,0);
+INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('Popcorns + 3 gaseosas por Q50.00',2,0,50);
+INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('30%!!!! en cualquier pelicula al presentar club BI',1,30,0);
+INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('4 gaseosas por Q12.00',2,0,12);
+INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('Combo estrella: 2 Popcorn + 3 gaseosas por Q75.00',2,0,75);
+INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('75% de descuento en todas las peliculas',1,75,0);
+INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('Precio reapertura: 45% de descuento',1,45,0);
+INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('2 porciones de nachos con queso x Q25.00',2,0,25);
+INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('1 porcion de nachos con carne + 1 gaseosa x Q15.00',2,0,15);
+INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('2 hot dogs por el precio de 1 a Q15.00',2,0,15);
+INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('Hot dog + papas + gaseosa x Q20,00',2,0,20);
 
 COMMIT;
 
