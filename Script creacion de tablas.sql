@@ -83,6 +83,35 @@ CREATE TABLE PELICULA_PERSONA(
     CONSTRAINT fk_id_pelicula_persona FOREIGN KEY(id_pelicula_fk) REFERENCES PELICULA(id_pelicula)
 )TABLESPACE PRACTICA1;
 
+CREATE TABLE PROMOCION(
+    id_promocion NUMBER GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1) PRIMARY KEY,
+    descripcion VARCHAR(500) NOT NULL,
+    tipo_promo NUMBER NOT NULL,
+    descuento NUMBER NOT NULL,
+    precio NUMBER NOT NULL
+)TABLESPACE PRACTICA1;
+
+CREATE TABLE FACTURA(
+    id_factura NUMBER GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1) PRIMARY KEY,
+    nit_emisor NUMBER NOT NULL,
+    nit_cliente NUMBER NOT NULL,
+    total_sin_iva NUMBER DEFAULT 0 NOT NULL,
+    monto_iva NUMBER DEFAULT 0 NOT NULL,
+    total_factura NUMBER DEFAULT 0 NOT NULL,
+    id_promocion_fk NUMBER NOT NULL,
+    CONSTRAINT fk_id_promocion FOREIGN KEY (id_promocion_fk) REFERENCES PROMOCION(id_promocion)
+) TABLESPACE PRACTICA1;
+
+CREATE TABLE DETALLE_FACTURA(
+    id_factura_fk NUMBER NOT NULL,
+    id_cartelera_fk NUMBER NOT NULL,
+    CONSTRAINT fk_id_factura FOREIGN KEY (id_factura_fk) REFERENCES FACTURA(id_factura),
+    CONSTRAINT fk_id_cartelera FOREIGN KEY (id_cartelera_fk) REFERENCES CARTELERA(id_cartelera),
+    cantidad NUMBER NOT NULL,
+    precio NUMBER NOT NULL
+)TABLESPACE PRACTICA1;
+
+
 --ELIMINAR TABLAS---------------------------------------------------------------------------------------------------------------
 
 DROP TABLE PELICULA_PERSONA;
@@ -95,4 +124,5 @@ DROP TABLE PELICULA;
 DROP TABLE GENERO;
 DROP TABLE CASA_PRODUCTORA;
 DROP TABLE SALA;
-
+DROP TABLE DETALLE_FACTURA;
+DROP TABLE FACTURA;
