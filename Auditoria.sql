@@ -48,7 +48,21 @@ where policy_name = 'ORA_SECURECONFIG'  --- UNA POLITICA
   from UNIFIED_AUDIT_TRAIL
   
   
+--==============================================================================================================================
+	--Logins fallidos
 
+--==============================================================================================================================
+
+
+
+CREATE AUDIT POLICY mi_log_fail ACTIONS LOGON;
+
+
+audit policy mi_log_fail whenever not successful;
+
+NOAUDIT policy ORA_LOGON_FAILURES;
+
+select * from unified_audit_trail where unified_audit_policies like '%MI_LOG_FAIL%';
   
 --==============================================================================================================================
 /*
