@@ -2,13 +2,13 @@
 --=============================================INSERCION DE LAS PROMOCIONES=====================================================
 --==============================================================================================================================
 --0=normal, 1=descuento, 2=promocion
-INSERT INTO USER_ALL.PROMOCION(descripcion, fecha_inicio, fecha_fin, tipo_promo, porcentaje, estado) values ('Precio normal','01-01-00','01-01-00',0,0,1);
+INSERT INTO USER_ALL.PROMOCION(descripcion, fecha_inicio, fecha_fin, tipo_promo, porcentaje, estado) values ('Precio normal','01-01-00','01-01-21',0,0,1);
 INSERT INTO USER_ALL.PROMOCION(descripcion, fecha_inicio, fecha_fin, tipo_promo, porcentaje, estado) values ('Precio 2x1 del 25-05 al 06-06','25-05-20','06-06-20',2,0.5,1);
 INSERT INTO USER_ALL.PROMOCION(descripcion, fecha_inicio, fecha_fin, tipo_promo, porcentaje, estado) values ('Precio 2x1 del 03-07 al 20-07','03-07-20','20-07-20',2,0.5,1);
 INSERT INTO USER_ALL.PROMOCION(descripcion, fecha_inicio, fecha_fin, tipo_promo, porcentaje, estado) values ('Precio 2x1 del 25-05 al 06-06','25-05-20','06-06-20',2,0.5,1);
 INSERT INTO USER_ALL.PROMOCION(descripcion, fecha_inicio, fecha_fin, tipo_promo, porcentaje, estado) values ('Precio 2x1 del 10-08 al 30-08','10-08-20','30-08-20',2,0.5,1);
 INSERT INTO USER_ALL.PROMOCION(descripcion, fecha_inicio, fecha_fin, tipo_promo, porcentaje, estado) values ('Precio 2x1 del 15-09 al 20-09','15-09-20','20-09-20',2,0.5,1);
-INSERT INTO USER_ALL.PROMOCION(descripcion, fecha_inicio, fecha_fin, tipo_promo, porcentaje, estado) values ('Promomocion 3x1 del 05-10 al 10-10','05-10-20','10-10-20',2,0.3333,1);
+INSERT INTO USER_ALL.PROMOCION(descripcion, fecha_inicio, fecha_fin, tipo_promo, porcentaje, estado) values ('Promomocion 3x1 del 05-10 al 10-10','05-10-20','10-10-20',2,0.6666,1);
 INSERT INTO USER_ALL.PROMOCION(descripcion, fecha_inicio, fecha_fin, tipo_promo, porcentaje, estado) values ('Descuento del 25% al pagar con club BI del 15-10 al 20-10','15-10-20','20-10-20',1,0.25,1);
 INSERT INTO USER_ALL.PROMOCION(descripcion, fecha_inicio, fecha_fin, tipo_promo, porcentaje, estado) values ('Descuento del 40% al presentar club Cinepolis del 15-10 al 20-10','15-10-20','20-10-20',1,0.4,1);
 INSERT INTO USER_ALL.PROMOCION(descripcion, fecha_inicio, fecha_fin, tipo_promo, porcentaje, estado) values ('75% de descuento al presentar DPI del 25-10 al 30-10','25-10-20','30-10-20',1,0.75,1);
@@ -65,23 +65,45 @@ COMMIT;
 --==============================================================================================================================
 --=============================================INSERCION DE LOS DETALLES========================================================
 --==============================================================================================================================
-
+EXEC USER_ALL.INS_DETALLEFACTURA(1,1,1,4,45);
+EXEC USER_ALL.INS_DETALLEFACTURA(2,2,2085,2,45);
+EXEC USER_ALL.INS_DETALLEFACTURA(3,3,73,4,50);
+EXEC USER_ALL.INS_DETALLEFACTURA(4,4,2596,6,45);
+EXEC USER_ALL.INS_DETALLEFACTURA(5,5,109,2,45);
+EXEC USER_ALL.INS_DETALLEFACTURA(6,6,1656,3,45);
+EXEC USER_ALL.INS_DETALLEFACTURA(7,7,870,4,45);
+EXEC USER_ALL.INS_DETALLEFACTURA(8,8,238,1,65);
+EXEC USER_ALL.INS_DETALLEFACTURA(9,9,2221,3,50);
+EXEC USER_ALL.INS_DETALLEFACTURA(10,10,341,4,45);
+EXEC USER_ALL.INS_DETALLEFACTURA(11,11,550,4,60);
+EXEC USER_ALL.INS_DETALLEFACTURA(12,12,1823,2,45);
+EXEC USER_ALL.INS_DETALLEFACTURA(13,13,924,4,50);
+EXEC USER_ALL.INS_DETALLEFACTURA(14,14,1840,5,45);
+EXEC USER_ALL.INS_DETALLEFACTURA(15,15,1363,6,45);
+EXEC USER_ALL.INS_DETALLEFACTURA(16,16,282,3,50);
+EXEC USER_ALL.INS_DETALLEFACTURA(17,17,2039,4,45);
+EXEC USER_ALL.INS_DETALLEFACTURA(18,18,786,1,65);
+EXEC USER_ALL.INS_DETALLEFACTURA(19,19,1864,3,50);
+EXEC USER_ALL.INS_DETALLEFACTURA(20,20,900,4,60);
+EXEC USER_ALL.INS_DETALLEFACTURA(21,21,1389,4,60);
+EXEC USER_ALL.INS_DETALLEFACTURA(22,22,885,2,45);
+EXEC USER_ALL.INS_DETALLEFACTURA(23,23,1029,4,75);
+EXEC USER_ALL.INS_DETALLEFACTURA(24,24,635,5,45);
+EXEC USER_ALL.INS_DETALLEFACTURA(25,25,1805,6,45);
+EXEC USER_ALL.INS_DETALLEFACTURA(26,25,1591,3,50);
+--EXEC USER_ALL.INS_DETALLEFACTURA(1,2,1660,5,35);
+--EXEC USER_ALL.INS_DETALLEFACTURA(1,2,1493,3,50);
 
 
 
 --CONSULTAS DE AYUDA
 /*
 select * from USER_ALL.PROMOCION;
-
 select USER_ALL.CARTELERA.FECHA from USER_ALL.CARTELERA
 GROUP BY USER_ALL.CARTELERA.FECHA
 ORDER BY USER_ALL.CARTELERA.FECHA ASC
 ;
-
 SELECT * FROM USER_ALL.CARTELERA;
-
 SELECT * FROM USER_ALL.FACTURA;
-
 DELETE FROM USER_ALL.DETALLE_FACTURA;
-
 UPDATE USER_ALL.PROMOCION SET USER_ALL.PROMOCION.FECHA_INICIO='04-05-20', USER_ALL.PROMOCION.FECHA_FIN='24-05-20' WHERE USER_ALL.PROMOCION.ID_PROMOCION=30*/
