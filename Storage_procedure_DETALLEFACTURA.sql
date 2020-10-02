@@ -1,0 +1,60 @@
+CREATE OR REPLACE PROCEDURE USER_ALL.INS_DETALLEFACTURA
+(
+    nId_factura IN NUMBER,
+    nId_promocion IN NUMBER,
+    nId_cartelera IN NUMBER,
+    nCantidad IN NUMBER,
+    nPrecio IN NUMBER
+)
+IS
+    vFechaIni DATE;
+    vFechaFin DATE;
+    vFechaCar DATE;
+    vEstado NUMBER;
+    vPorcentaje NUMBER;
+BEGIN
+    SELECT USER_ALL.CARTELERA.FECHA INTO vFechaCar FROM USER_ALL.CARTELERA WHERE USER_ALL.CARTELERA.ID_CARTELERA=nId_cartelera;
+    SELECT USER_ALL.PROMOCION.FECHA_INICIO INTO vFechaIni FROM USER_ALL.PROMOCION WHERE USER_ALL.PROMOCION.ID_PROMOCION=nId_promocion;
+    SELECT USER_ALL.PROMOCION.FECHA_FIN INTO vFechaFin FROM USER_ALL.PROMOCION WHERE USER_ALL.PROMOCION.ID_PROMOCION=nId_promocion;
+    SELECT USER_ALL.PROMOCION.PORCENTAJE INTO vPorcentaje FROM USER_ALL.PROMOCION WHERE USER_ALL.PROMOCION.ID_PROMOCION=nId_promocion;
+    SELECT USER_ALL.PROMOCION.ESTADO INTO vEstado FROM USER_ALL.PROMOCION WHERE USER_ALL.PROMOCION.ID_PROMOCION=nId_promocion;
+    IF vfechacar >= vfechaini and vfechacar <= vfechafin 
+        THEN
+            IF vEstado=1 
+                THEN
+                    INSERT INTO USER_ALL.DETALLE_FACTURA (id_factura,id_promocion,id_cartelera,valor_pelicula,subtotal,num_entradas) 
+                        values (nId_factura, nId_promocion, nId_cartelera, nPrecio, (nPrecio*nCantidad)-((nPrecio*nCantidad)*vPorcentaje),nCantidad);
+                    DBMS_OUTPUT.put_line ('INSERTADO');
+            ELSE
+                DBMS_OUTPUT.put_line ('PROMOCION INACTIVA');
+            END IF;
+    ELSE
+        DBMS_OUTPUT.put_line ('NO SE INSERTO');
+    END IF;
+    --DBMS_OUTPUT.put_line (CONCAT('FECHA CARTELERA ', vfechacar));
+    --DBMS_OUTPUT.put_line (vfechaini);
+    --DBMS_OUTPUT.put_line (vfechafin);
+END;
+
+--DROP PROCEDURE USER_ALL.INS_DETALLEFACTURA;
+
+--====================INSERCIONES DE PRUEBA
+--EXEC USER_ALL.INS_DETALLEFACTURA(1,2,1660,5,35);
+--EXEC USER_ALL.INS_DETALLEFACTURA(1,2,1493,3,50);
+
+--PARA MOSTRAR LOS MENSAJES EN CONSOLA
+--SET serveroutput ON;
+
+--=================CONSULTAS DE AYUDA================
+/*
+SELECT * FROM USER_ALL.PROMOCION;
+
+SELECT * FROM USER_ALL.CARTELERA;
+
+SELECT * FROM USER_ALL.FACTURA;
+
+SELECT * FROM USER_ALL.DETALLE_FACTURA;
+
+UPDATE USER_ALL.FACTURA SET USER_ALL.FACTURA.TOTAL_SIN_IVA=0, USER_ALL.FACTURA.MONTO_IVA=0, USER_ALL.FACTURA.TOTAL_FACTURA=0 WHERE USER_ALL.FACTURA.ID_FACTURA=1;
+
+*/
