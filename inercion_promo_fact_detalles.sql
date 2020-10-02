@@ -27,6 +27,7 @@ INSERT INTO USER_ALL.PROMOCION(descripcion, fecha_inicio, fecha_fin, tipo_promo,
 INSERT INTO USER_ALL.PROMOCION(descripcion, fecha_inicio, fecha_fin, tipo_promo, porcentaje, estado) values ('Promocion Navideña, 2x1','01-12-20','31-12-20',2,0.5,1);
 INSERT INTO USER_ALL.PROMOCION(descripcion, fecha_inicio, fecha_fin, tipo_promo, porcentaje, estado) values ('Promocion Navideña, 50% al presentar club BI','01-12-20','31-12-20',2,0.5,1);
 INSERT INTO USER_ALL.PROMOCION(descripcion, fecha_inicio, fecha_fin, tipo_promo, porcentaje, estado) values ('Promo Navidad premium, 75% al presentar club Cinepolis','01-12-20','31-12-20',2,0.75,1);
+COMMIT;
 
 --==============================================================================================================================
 --=============================================INSERCION DE LAS FACTURAS========================================================
@@ -58,6 +59,7 @@ INSERT INTO USER_ALL.FACTURA (nit_emisor, nit_cliente) values (123456,171717);
 INSERT INTO USER_ALL.FACTURA (nit_emisor, nit_cliente) values (123456,717171);
 INSERT INTO USER_ALL.FACTURA (nit_emisor, nit_cliente) values (123456,111888);
 INSERT INTO USER_ALL.FACTURA (nit_emisor, nit_cliente) values (123456,888111);
+COMMIT;
 
 
 --==============================================================================================================================
@@ -68,7 +70,7 @@ INSERT INTO USER_ALL.FACTURA (nit_emisor, nit_cliente) values (123456,888111);
 
 
 --CONSULTAS DE AYUDA
-
+/*
 select * from USER_ALL.PROMOCION;
 
 select USER_ALL.CARTELERA.FECHA from USER_ALL.CARTELERA
@@ -82,4 +84,4 @@ SELECT * FROM USER_ALL.FACTURA;
 
 DELETE FROM USER_ALL.DETALLE_FACTURA;
 
-UPDATE USER_ALL.PROMOCION SET USER_ALL.PROMOCION.FECHA_INICIO='04-05-20', USER_ALL.PROMOCION.FECHA_FIN='24-05-20' WHERE USER_ALL.PROMOCION.ID_PROMOCION=30
+UPDATE USER_ALL.PROMOCION SET USER_ALL.PROMOCION.FECHA_INICIO='04-05-20', USER_ALL.PROMOCION.FECHA_FIN='24-05-20' WHERE USER_ALL.PROMOCION.ID_PROMOCION=30*/
