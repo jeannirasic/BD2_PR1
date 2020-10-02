@@ -1,5 +1,8 @@
 alter session set "_ORACLE_SCRIPT"=true;
 
+ALTER SESSION SET NLS_DATE_FORMAT = 'dd-mm-yyyy';
+ALTER SESSION SET  NLS_TIMESTAMP_FORMAT = 'DD-MM-RR HH12:MI:SSXFF AM'
+
 --==============================================================================================================================
 --===================================================INSERCION EN SALAS=========================================================
 --==============================================================================================================================
@@ -54,25 +57,25 @@ INSERT INTO USER_ALL.GENERO(nombre_genero) VALUES('Romanticas');
 --==============================================================================================================================
 --=================================================INSERCION EN PELICULA========================================================
 --==============================================================================================================================
-INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
+INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
 VALUES('Avengers: Endgame', 'PG-13', 'Ingles', 1, 181, 2019, 'Es una película de superhéroes estadounidense de 2019 basada en el grupo Los Vengadores de Marvel Comics, fue producida por Marvel Studios y distribuida por Walt Disney Studios Motion Pictures', 5);
-INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
+INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
 VALUES('Avatar', 'PG-13', 'Ingles', 1, 162, 2009, 'Es una película épica de ciencia ficción estadounidense de 2009, escrita, producida y dirigida por James Cameron y protagonizada por Sam Worthington, Zoe Saldaña, Sigourney Weaver, Stephen Lang y Michelle Rodríguez.', 7);
-INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
+INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
 VALUES('Titanic', 'PG-13', 'Ingles', 1, 195, 1997, 'Es una película estadounidense dramática de catástrofe de 1997 dirigida y escrita por James Cameron y protagonizada por Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates, Gloria Stuart y Bill Paxton.', 6);
-INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
+INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
 VALUES('Star Wars: Episodio VII - El Despertar de la Fuerza', 'PG-13', 'Ingles', 1, 136, 2015, 'Es una película estadounidense del género space opera, dirigida por J. J. Abrams,​producida por Kathleen Kennedy, Abrams y Bryan Burk y escrita por Lawrence Kasdan, Abrams y Michael Arndt.', 16);
-INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
+INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
 VALUES('Avengers: Infinity War', 'PG-13', 'Ingles', 1, 149, 2018, 'Es una película estadounidense de superhéroes de 2018, basada en el equipo de superhéroes de Marvel Comics los Vengadores, producida por Marvel Studios y distribuida por Walt Disney Studios Motion Pictures.', 5);
-INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
+INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
 VALUES('Jurassic World', 'PG-13', 'Ingles', 1, 124, 2015, 'Es una película estadounidense de ciencia ficción y aventuras estrenada en 2015, es la cuarta entrega de la franquicia de Parque Jurásico.', 9);
-INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
+INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
 VALUES('El Rey León', 'A', 'Ingles', 1, 118, 2019, 'Es una película musical de imagen generada por computadora de 2019 producida por Walt Disney Pictures, dirigida por Jon Favreau y escrita por Jeff Nathanson.', 4);
-INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
+INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
 VALUES('Avengers', 'PG-13', 'Ingles', 1, 143, 2012, 'Es una película de superhéroes estadounidense de 2012 basada en el equipo de superhéroes homónimo de Marvel Comics, producida por Marvel Studios y distribuida por Walt Disney Studios Motion Pictures, en colaboración con Paramount Pictures.', 5);
-INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
+INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
 VALUES('Fast and Furious 7', 'PG-13', 'Ingles', 1, 137, 2015, 'Es una película de acción estadounidense de 2015 dirigida por James Wan y protagonizada por Vin Diesel, Paul Walker, Dwayne Johnson, Michelle Rodríguez, Jordana Brewster, Tyrese Gibson, Chris "Ludacris" Bridges y Jason Statham.', 17);
-INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
+INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
 VALUES('Avengers: Age of Ultron', 'PG-13', 'Ingles', 1, 141, 2015, 'Es una película de superhéroes estadounidense de 2015 basada en el equipo de Marvel Comics los Vengadores, producida por Marvel Studios y distribuida por Walt Disney Studios Motion Pictures.', 5);
 
 --==============================================================================================================================

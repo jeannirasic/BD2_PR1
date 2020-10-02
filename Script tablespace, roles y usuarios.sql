@@ -115,7 +115,7 @@ GRANT DROP ANY TRIGGER TO ROLE_CUD;
 GRANT DROP ANY VIEW TO ROLE_CUD;
 GRANT EXECUTE ANY PROCEDURE TO ROLE_CUD;
 --===============================================
-GRANT INSERT ON USER_ALL.INS_CARTELERA TO ROLE_CUD; --de inserción de datos solo sobre las tablas cartelera, promociones y de las tablas transaccionales de venta de boletos (las que su modelo requiera).
+GRANT INSERT ON USER_ALL.CARTELERA TO ROLE_CUD; --de inserción de datos solo sobre las tablas cartelera, promociones y de las tablas transaccionales de venta de boletos (las que su modelo requiera).
 GRANT INSERT ON USER_ALL.PROMOCION TO ROLE_CUD;
 GRANT INSERT ON USER_ALL.FACTURA TO ROLE_CUD;
 GRANT INSERT ON USER_ALL.DETALLE_FACTURA TO ROLE_CUD;

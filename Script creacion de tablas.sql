@@ -30,7 +30,7 @@ CREATE TABLE PELICULA(
     es_subtitulada CHAR(1) NOT NULL,
     CONSTRAINT ck_es_subtitulada CHECK (lower(es_subtitulada) IN (1, 0)),
     duracion INT NOT NULL,
-    año_produccion INT NOT NULL,
+    aï¿½o_produccion INT NOT NULL,
     resumen VARCHAR(500) NOT NULL,
     id_productora_pelicula NUMBER NOT NULL,
     CONSTRAINT pk_id_productora_pelicula FOREIGN KEY(id_productora_pelicula) REFERENCES CASA_PRODUCTORA(id_productora)
@@ -117,9 +117,24 @@ CREATE TABLE DETALLE_FACTURA(
 COMMIT;
 
 
+ALTER TABLE USER_ALL.SALA
+  ADD columna_prueba varchar2(45);
+
+
+ALTER TABLE USER_ALL.PELICULA
+  ADD columna_prueba varchar2(45);
+
+SELECT * FROM USER_ALL.SALA;
+
+SELECT * FROM USER_ALL.PELICULA;
+
+
 --ELIMINAR TABLAS---------------------------------------------------------------------------------------------------------------
 
-/*DROP TABLE PELICULA_PERSONA;
+/*DROP TABLE DETALLE_FACTURA;
+DROP TABLE FACTURA;
+DROP TABLE PROMOCION;
+DROP TABLE PELICULA_PERSONA;
 DROP TABLE PERSONA;
 DROP TABLE ROL;
 DROP TABLE PAIS;
@@ -128,5 +143,4 @@ DROP TABLE PELICULA_GENERO;
 DROP TABLE PELICULA;
 DROP TABLE GENERO;
 DROP TABLE CASA_PRODUCTORA;
-DROP TABLE SALA;
-DROP TABLE PROMOCION;*/
+DROP TABLE SALA;*/
