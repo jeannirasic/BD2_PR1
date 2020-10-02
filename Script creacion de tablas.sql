@@ -30,7 +30,7 @@ CREATE TABLE PELICULA(
     es_subtitulada CHAR(1) NOT NULL,
     CONSTRAINT ck_es_subtitulada CHECK (lower(es_subtitulada) IN (1, 0)),
     duracion INT NOT NULL,
-    aÃ±o_produccion INT NOT NULL,
+    año_produccion INT NOT NULL,
     resumen VARCHAR(500) NOT NULL,
     id_productora_pelicula NUMBER NOT NULL,
     CONSTRAINT pk_id_productora_pelicula FOREIGN KEY(id_productora_pelicula) REFERENCES CASA_PRODUCTORA(id_productora)
@@ -87,8 +87,10 @@ CREATE TABLE PROMOCION(
     id_promocion NUMBER GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1) PRIMARY KEY,
     descripcion VARCHAR(500) NOT NULL,
     tipo_promo NUMBER NOT NULL,
-    descuento NUMBER NOT NULL,
-    precio NUMBER NOT NULL
+    fecha_inicio DATE NOT NULL,
+    fecha_fin DATE NOT NULL,
+    porcentaje NUMBER NOT NULL,
+    estado NUMBER NOT NULL
 )TABLESPACE PRACTICA1;
 
 CREATE TABLE FACTURA(
@@ -97,24 +99,27 @@ CREATE TABLE FACTURA(
     nit_cliente NUMBER NOT NULL,
     total_sin_iva NUMBER DEFAULT 0 NOT NULL,
     monto_iva NUMBER DEFAULT 0 NOT NULL,
-    total_factura NUMBER DEFAULT 0 NOT NULL,
-    id_promocion_fk NUMBER NOT NULL,
-    CONSTRAINT fk_id_promocion FOREIGN KEY (id_promocion_fk) REFERENCES PROMOCION(id_promocion)
+    total_factura NUMBER DEFAULT 0 NOT NULL
 ) TABLESPACE PRACTICA1;
 
 CREATE TABLE DETALLE_FACTURA(
-    id_factura_fk NUMBER NOT NULL,
-    id_cartelera_fk NUMBER NOT NULL,
-    CONSTRAINT fk_id_factura FOREIGN KEY (id_factura_fk) REFERENCES FACTURA(id_factura),
-    CONSTRAINT fk_id_cartelera FOREIGN KEY (id_cartelera_fk) REFERENCES CARTELERA(id_cartelera),
-    cantidad NUMBER NOT NULL,
-    precio NUMBER NOT NULL
-)TABLESPACE PRACTICA1;
+    id_factura NUMBER NOT NULL,
+    id_promocion NUMBER NOT NULL,
+    id_cartelera NUMBER NOT NULL,
+    num_entradas NUMBER NOT NULL,
+    valor_pelicula NUMBER NOT NULL,
+    subtotal NUMBER(10,2) NOT NULL,
+    FOREIGN KEY(id_factura) REFERENCES FACTURA(id_factura),
+    FOREIGN KEY(id_promocion) REFERENCES PROMOCION(id_promocion),
+    FOREIGN KEY(id_cartelera) REFERENCES CARTELERA(id_cartelera)
+);
+
+COMMIT;
 
 
 --ELIMINAR TABLAS---------------------------------------------------------------------------------------------------------------
 
-DROP TABLE PELICULA_PERSONA;
+/*DROP TABLE PELICULA_PERSONA;
 DROP TABLE PERSONA;
 DROP TABLE ROL;
 DROP TABLE PAIS;
@@ -124,5 +129,4 @@ DROP TABLE PELICULA;
 DROP TABLE GENERO;
 DROP TABLE CASA_PRODUCTORA;
 DROP TABLE SALA;
-DROP TABLE DETALLE_FACTURA;
-DROP TABLE FACTURA;
+DROP TABLE PROMOCION;*/
