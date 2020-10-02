@@ -54,25 +54,25 @@ INSERT INTO USER_ALL.GENERO(nombre_genero) VALUES('Romanticas');
 --==============================================================================================================================
 --=================================================INSERCION EN PELICULA========================================================
 --==============================================================================================================================
-INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, año_produccion,resumen, id_productora_pelicula)
+INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
 VALUES('Avengers: Endgame', 'PG-13', 'Ingles', 1, 181, 2019, 'Es una película de superhéroes estadounidense de 2019 basada en el grupo Los Vengadores de Marvel Comics, fue producida por Marvel Studios y distribuida por Walt Disney Studios Motion Pictures', 5);
-INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, año_produccion,resumen, id_productora_pelicula)
+INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
 VALUES('Avatar', 'PG-13', 'Ingles', 1, 162, 2009, 'Es una película épica de ciencia ficción estadounidense de 2009, escrita, producida y dirigida por James Cameron y protagonizada por Sam Worthington, Zoe Saldaña, Sigourney Weaver, Stephen Lang y Michelle Rodríguez.', 7);
-INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, año_produccion,resumen, id_productora_pelicula)
+INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
 VALUES('Titanic', 'PG-13', 'Ingles', 1, 195, 1997, 'Es una película estadounidense dramática de catástrofe de 1997 dirigida y escrita por James Cameron y protagonizada por Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates, Gloria Stuart y Bill Paxton.', 6);
-INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, año_produccion,resumen, id_productora_pelicula)
+INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
 VALUES('Star Wars: Episodio VII - El Despertar de la Fuerza', 'PG-13', 'Ingles', 1, 136, 2015, 'Es una película estadounidense del género space opera, dirigida por J. J. Abrams,​producida por Kathleen Kennedy, Abrams y Bryan Burk y escrita por Lawrence Kasdan, Abrams y Michael Arndt.', 16);
-INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, año_produccion,resumen, id_productora_pelicula)
+INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
 VALUES('Avengers: Infinity War', 'PG-13', 'Ingles', 1, 149, 2018, 'Es una película estadounidense de superhéroes de 2018, basada en el equipo de superhéroes de Marvel Comics los Vengadores, producida por Marvel Studios y distribuida por Walt Disney Studios Motion Pictures.', 5);
-INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, año_produccion,resumen, id_productora_pelicula)
+INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
 VALUES('Jurassic World', 'PG-13', 'Ingles', 1, 124, 2015, 'Es una película estadounidense de ciencia ficción y aventuras estrenada en 2015, es la cuarta entrega de la franquicia de Parque Jurásico.', 9);
-INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, año_produccion,resumen, id_productora_pelicula)
+INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
 VALUES('El Rey León', 'A', 'Ingles', 1, 118, 2019, 'Es una película musical de imagen generada por computadora de 2019 producida por Walt Disney Pictures, dirigida por Jon Favreau y escrita por Jeff Nathanson.', 4);
-INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, año_produccion,resumen, id_productora_pelicula)
+INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
 VALUES('Avengers', 'PG-13', 'Ingles', 1, 143, 2012, 'Es una película de superhéroes estadounidense de 2012 basada en el equipo de superhéroes homónimo de Marvel Comics, producida por Marvel Studios y distribuida por Walt Disney Studios Motion Pictures, en colaboración con Paramount Pictures.', 5);
-INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, año_produccion,resumen, id_productora_pelicula)
+INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
 VALUES('Fast and Furious 7', 'PG-13', 'Ingles', 1, 137, 2015, 'Es una película de acción estadounidense de 2015 dirigida por James Wan y protagonizada por Vin Diesel, Paul Walker, Dwayne Johnson, Michelle Rodríguez, Jordana Brewster, Tyrese Gibson, Chris "Ludacris" Bridges y Jason Statham.', 17);
-INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, año_produccion,resumen, id_productora_pelicula)
+INSERT INTO USER_ALL.PELICULA(nombre_pelicula, clasificacion, idioma, es_subtitulada, duracion, a�o_produccion,resumen, id_productora_pelicula)
 VALUES('Avengers: Age of Ultron', 'PG-13', 'Ingles', 1, 141, 2015, 'Es una película de superhéroes estadounidense de 2015 basada en el equipo de Marvel Comics los Vengadores, producida por Marvel Studios y distribuida por Walt Disney Studios Motion Pictures.', 5);
 
 --==============================================================================================================================
@@ -676,7 +676,11 @@ INSERT INTO USER_ALL.PELICULA_PERSONA(id_rol_fk, id_persona_fk, id_pelicula_fk, 
 --=============================================INSERCION DE LAS PROMOCIONES=====================================================
 --==============================================================================================================================
 --0=normal, 1=descuento, 2=promocion
-INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('Precio normal',0,0,0);
+INSERT INTO USER_ALL.PROMOCION(descripcion, fecha_inicio, fecha_fin, tipo_promo, porcentaje, estado) values ('Precio normal','01-01-00','01-01-00',0,0,1);
+INSERT INTO USER_ALL.PROMOCION(descripcion, fecha_inicio, fecha_fin, tipo_promo, porcentaje, estado) values ('Precio 2x1','25-05-20','06-06-20',2,0.5,1);
+--INSERT INTO USER_ALL.PROMOCION(descripcion, fecha_inicio, fecha_fin, tipo_promo, porcentaje, estado) values ('Precio normal','01-01-00','01-01-00',0,0,1);
+--INSERT INTO USER_ALL.PROMOCION(descripcion, fecha_inicio, fecha_fin, tipo_promo, porcentaje, estado) values ('Precio normal','01-01-00','01-01-00',0,0,1);
+/*INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('Precio normal',0,0,0);
 INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('Precio 2x1',1,50,0);
 INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('2 gaseosas por Q15.00',2,0,25);
 INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('Combo amigos por Q50.00',2,0,50);
@@ -700,7 +704,36 @@ INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUE
 INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('2 porciones de nachos con queso x Q25.00',2,0,25);
 INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('1 porcion de nachos con carne + 1 gaseosa x Q15.00',2,0,15);
 INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('2 hot dogs por el precio de 1 a Q15.00',2,0,15);
-INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('Hot dog + papas + gaseosa x Q20,00',2,0,20);
+INSERT INTO USER_ALL.PROMOCION(descripcion, tipo_promo, descuento, precio) VALUES('Hot dog + papas + gaseosa x Q20,00',2,0,20);*/
+
+
+--==============================================================================================================================
+--=============================================INSERCION DE LAS FACTURAS========================================================
+--==============================================================================================================================
+
+INSERT INTO FACTURA (nit_emisor, nit_cliente) values (123456,111111);
+INSERT INTO FACTURA (nit_emisor, nit_cliente) values (123456,112233);
+INSERT INTO FACTURA (nit_emisor, nit_cliente) values (123456,111222);
+
+--==============================================================================================================================
+--=============================================INSERCION DE LOS DETALLES========================================================
+--==============================================================================================================================
+
+INSERT INTO DETALLE_FACTURA (id_factura,id_promocion,id_cartelera,valor_pelicula,subtotal,num_entradas) VALUES (1,2,375,65,195,3);
+INSERT INTO DETALLE_FACTURA (id_factura,id_promocion,id_cartelera,valor_pelicula,subtotal,num_entradas) VALUES (1,2,376,80,320,4);
 
 COMMIT;
 
+
+--CONSULTAS DE AYUDA
+
+select * from USER_ALL.PROMOCION;
+
+select USER_ALL.CARTELERA.FECHA from USER_ALL.CARTELERA
+GROUP BY USER_ALL.CARTELERA.FECHA
+ORDER BY USER_ALL.CARTELERA.FECHA ASC
+;
+
+SELECT * FROM USER_ALL.CARTELERA;
+
+SELECT * FROM USER_ALL.FACTURA;
