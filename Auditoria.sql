@@ -49,27 +49,49 @@ where policy_name = 'ORA_SECURECONFIG'  --- UNA POLITICA
   
   
 --==============================================================================================================================
-	--Logins fallidos
-
+/*
+                        Tener una política de auditoria para el logueo de los usuarios. —Deben registrarse pruebas
+                        de logueo con error.
+*/
 --==============================================================================================================================
 
+CREATE AUDIT POLICY mi_log_fail 
+        ACTIONS LOGON;
 
 
-CREATE AUDIT POLICY mi_log_fail ACTIONS LOGON;
+AUDIT POLICY mi_log_fail WHENEVER NOT SUCCESSFUL;
+
+NOAUDIT POLICY ORA_LOGON_FAILURES;
+
+SELECT audit_option,
+       condition_eval_opt,
+       audit_condition
+FROM   audit_unified_policies
+WHERE  policy_name = 'MI?LOGIN_FAIL';
 
 
-audit policy mi_log_fail whenever not successful;
 
-NOAUDIT policy ORA_LOGON_FAILURES;
+ EXEC DBMS_AUDIT_MGMT.flush_unified_audit_trail;
 
-select * from unified_audit_trail where unified_audit_policies like '%MI_LOG_FAIL%';
+SELECT to_char( event_timestamp, 'dd/mm/yyyy hh24:mi:ss'),
+      event_timestamp,
+       dbusername,
+       action_name,
+       object_schema,
+       object_name , SQL_TEXT
+FROM   unified_audit_trail
+WHERE UNIFIED_AUDIT_POLICIES LIKE '%MI_LOG_FAIL%'
+ORDER BY event_timestamp;
+
+
+NOAUDIT POLICY mi_log_fail;
+
+DROP AUDIT POLICY mi_log_fail;
   
 --==============================================================================================================================
 /*
                         Tener una política de auditoria para el logueo de los usuarios. —Deben registrarse pruebas
-                        de logueo exitoso y logueo con error.
-                        
-                        PENDIENTE EL ERROR
+                        de logueo exitoso.
 */
 --==============================================================================================================================
 
