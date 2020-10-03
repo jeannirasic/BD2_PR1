@@ -82,21 +82,21 @@ NOMBRE_PRODUCTORA,
 fecha || ' ' || to_char(hora_inicio, 'hh:mm') fecha_hora , 
 sala.num_sala Sala, 
 sala.capacidad,      
-det_fac.num_entradas,
-PROMO.DESCRIPCION
+det_fac.num_entradas
 FROM USER_ALL.CARTELERA CART
 , USER_ALL.SALA SALA, 
 ( 
   select peli.id_pelicula,peli.clasificacion, peli.nombre_pelicula, gen.nombre_genero, CASA_P.NOMBRE_PRODUCTORA from (
     select id_pelicula_fk, min(id_genero_fk) as gen from USER_ALL.pelicula_genero group by id_pelicula_fk
-  ) gen_peli ,
-  USER_ALL.GENERO GEN, USER_ALL.PELICULA PELI, USER_ALL.CASA_PRODUCTORA CASA_P
-  WHERE GEN_PELI.GEN = GEN.ID_GENERO AND GEN_PELI.ID_PELICULA_FK = PELI.ID_PELICULA AND CASA_P.ID_PRODUCTORA = PELI.ID_PRODUCTORA_PELICULA
+) gen_peli ,
+
+USER_ALL.GENERO GEN, USER_ALL.PELICULA PELI, USER_ALL.CASA_PRODUCTORA CASA_P
+WHERE GEN_PELI.GEN = GEN.ID_GENERO AND GEN_PELI.ID_PELICULA_FK = PELI.ID_PELICULA AND CASA_P.ID_PRODUCTORA = PELI.ID_PRODUCTORA_PELICULA
 ) GEN_PELI,
 user_all.detalle_factura det_fac, USER_ALL.PROMOCION PROMO
 
 WHERE SALA.NUM_SALA = CART.NUM_SALA_CARTELERA AND GEN_PELI.id_pelicula = cart.id_pelicula_cartelera
-and det_fac.id_cartelera = CART.ID_CARTELERA AND PROMO.ID_PROMOCION = DET_FAC.ID_PROMOCION;
-
-
-
+AND det_fac.id_cartelera = CART.ID_CARTELERA AND PROMO.ID_PROMOCION = DET_FAC.ID_PROMOCION
+AND CART.FECHA>=TO_DATE('01-03-2020','dd-mm-yyyy') 
+and CART.FECHA<=TO_DATE('20-03-2020','dd-mm-yyyy') 
+;
