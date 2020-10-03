@@ -56,6 +56,47 @@ group by PERSONA.NOMBRE_PERSONA, ROL.NOMBRE_ROL, CARTELERA.FECHA, PELICULA.NOMBR
 order by CARTELERA.FECHA ASC
 ;
 
-SELECT *
-FROM USER_ALL.PERSONA;
+
+
+/*==============================================================
+
+		Consulta practica 2
+
+i. Nombre de la película                     
+ii. Clasificación                            
+iii. Casa productora                         
+iv. Función (día, hora de la función)      --  
+v. Sala 									 
+vi. Capacidad de la sala                     
+vii. Cantidad de boletos vendidos
+viii. cantidad de promociones aplicadas
+
+
+==============================================================*/
+
+SELECT 
+nombre_pelicula, 
+CLASIFICACION,
+nombre_genero,
+NOMBRE_PRODUCTORA,
+fecha || ' ' || to_char(hora_inicio, 'hh:mm') fecha_hora , 
+sala.num_sala Sala, 
+sala.capacidad,      
+det_fac.num_entradas,
+PROMO.DESCRIPCION
+FROM USER_ALL.CARTELERA CART
+, USER_ALL.SALA SALA, 
+( 
+  select peli.id_pelicula,peli.clasificacion, peli.nombre_pelicula, gen.nombre_genero, CASA_P.NOMBRE_PRODUCTORA from (
+    select id_pelicula_fk, min(id_genero_fk) as gen from USER_ALL.pelicula_genero group by id_pelicula_fk
+  ) gen_peli ,
+  USER_ALL.GENERO GEN, USER_ALL.PELICULA PELI, USER_ALL.CASA_PRODUCTORA CASA_P
+  WHERE GEN_PELI.GEN = GEN.ID_GENERO AND GEN_PELI.ID_PELICULA_FK = PELI.ID_PELICULA AND CASA_P.ID_PRODUCTORA = PELI.ID_PRODUCTORA_PELICULA
+) GEN_PELI,
+user_all.detalle_factura det_fac, USER_ALL.PROMOCION PROMO
+
+WHERE SALA.NUM_SALA = CART.NUM_SALA_CARTELERA AND GEN_PELI.id_pelicula = cart.id_pelicula_cartelera
+and det_fac.id_cartelera = CART.ID_CARTELERA AND PROMO.ID_PROMOCION = DET_FAC.ID_PROMOCION;
+
+
 
