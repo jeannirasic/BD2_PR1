@@ -29,6 +29,20 @@ INSERT INTO USER_ALL.PROMOCION(descripcion, fecha_inicio, fecha_fin, tipo_promo,
 INSERT INTO USER_ALL.PROMOCION(descripcion, fecha_inicio, fecha_fin, tipo_promo, porcentaje, estado) values ('Promo Navidad premium, 75% al presentar club Cinepolis','01-12-2020','31-12-2020',2,0.75,1);
 COMMIT;
 
+/*
+
+
+update promocion set fecha_inicio = to_char(fecha_inicio,'dd') || '-' || to_char(fecha_inicio,'mm') || '-' || (to_char(fecha_inicio,'yyyy') + 2000 )
+where to_char(fecha_inicio,'yyyy') < 1000 ;
+
+update promocion set fecha_fin = to_char(fecha_fin,'dd') || '-' || to_char(fecha_fin,'mm') || '-' || (to_char(fecha_fin,'yyyy') + 2000 )
+where to_char(fecha_fin,'yyyy') < 1000 ;
+
+
+
+*/
+
+
 --==============================================================================================================================
 --=============================================INSERCION DE LAS FACTURAS========================================================
 --==============================================================================================================================
