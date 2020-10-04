@@ -73,7 +73,6 @@ viii. cantidad de promociones aplicadas
 
 
 ==============================================================*/
-
 SELECT 
 nombre_pelicula, 
 CLASIFICACION,
@@ -82,7 +81,8 @@ NOMBRE_PRODUCTORA,
 fecha || ' ' || to_char(hora_inicio, 'hh:mm') fecha_hora , 
 sala.num_sala Sala, 
 sala.capacidad,      
-det_fac.num_entradas
+det_fac.num_entradas,
+promo.descripcion
 FROM USER_ALL.CARTELERA CART
 , USER_ALL.SALA SALA, 
 ( 
@@ -97,6 +97,6 @@ user_all.detalle_factura det_fac, USER_ALL.PROMOCION PROMO
 
 WHERE SALA.NUM_SALA = CART.NUM_SALA_CARTELERA AND GEN_PELI.id_pelicula = cart.id_pelicula_cartelera
 AND det_fac.id_cartelera = CART.ID_CARTELERA AND PROMO.ID_PROMOCION = DET_FAC.ID_PROMOCION
-AND CART.FECHA>=TO_DATE('01-03-2020','dd-mm-yyyy') 
-and CART.FECHA<=TO_DATE('20-03-2020','dd-mm-yyyy') 
+AND CART.FECHA>=TO_DATE('01-01-2020','dd-mm-yyyy') 
+and CART.FECHA<=TO_DATE('31-12-2020','dd-mm-yyyy') 
 ;
