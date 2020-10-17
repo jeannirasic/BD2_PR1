@@ -127,3 +127,58 @@ SELECT * FROM USER_ALL.CARTELERA;
 SELECT * FROM USER_ALL.FACTURA;
 DELETE FROM USER_ALL.DETALLE_FACTURA;
 UPDATE USER_ALL.PROMOCION SET USER_ALL.PROMOCION.FECHA_INICIO='04-05-20', USER_ALL.PROMOCION.FECHA_FIN='24-05-20' WHERE USER_ALL.PROMOCION.ID_PROMOCION=30*/
+
+
+---INSERCIONES PRACTICA 3-------------------------------------------------------------------------------------------------------
+INSERT INTO USER_ALL.DIA_FESTIVO(nombre_dia_festivo, fecha_dia_festivo) VALUES('Año Nuevo', '01-01-2000');
+INSERT INTO USER_ALL.DIA_FESTIVO(nombre_dia_festivo, fecha_dia_festivo) VALUES('Día del Trabajo', '01-05-2000');
+INSERT INTO USER_ALL.DIA_FESTIVO(nombre_dia_festivo, fecha_dia_festivo) VALUES('Día del Ejército', '30-06-2000');
+INSERT INTO USER_ALL.DIA_FESTIVO(nombre_dia_festivo, fecha_dia_festivo) VALUES('Fiesta de la Asunción', '15-08-2000');
+INSERT INTO USER_ALL.DIA_FESTIVO(nombre_dia_festivo, fecha_dia_festivo) VALUES('Día de la Independencia de Guatemala', '15-09-2000');
+INSERT INTO USER_ALL.DIA_FESTIVO(nombre_dia_festivo, fecha_dia_festivo) VALUES('Dia de la Revolución', '20-10-2000');
+INSERT INTO USER_ALL.DIA_FESTIVO(nombre_dia_festivo, fecha_dia_festivo) VALUES('Día de Todos Los Santos', '01-11-2000');
+INSERT INTO USER_ALL.DIA_FESTIVO(nombre_dia_festivo, fecha_dia_festivo) VALUES('Navidad', '25-12-2000');
+
+
+
+INSERT INTO USER_ALL.EMPLEADO(nombre_empleado, sexo_empleado, fecha_nacimiento, telefono_empleado) VALUES('Juan Perez', 'M', '01-01-1990', '12345678');
+INSERT INTO USER_ALL.EMPLEADO(nombre_empleado, sexo_empleado, fecha_nacimiento, telefono_empleado) VALUES('Maria Lopez', 'F', '01-02-1991', '12345678');
+INSERT INTO USER_ALL.EMPLEADO(nombre_empleado, sexo_empleado, fecha_nacimiento, telefono_empleado) VALUES('Luis Cruz', 'M', '01-03-1992', '12345678');
+INSERT INTO USER_ALL.EMPLEADO(nombre_empleado, sexo_empleado, fecha_nacimiento, telefono_empleado) VALUES('Sofia Paz', 'F', '01-04-1993', '12345678');
+INSERT INTO USER_ALL.EMPLEADO(nombre_empleado, sexo_empleado, fecha_nacimiento, telefono_empleado) VALUES('Pablo Martinez', 'M', '01-05-1994', '12345678');
+INSERT INTO USER_ALL.EMPLEADO(nombre_empleado, sexo_empleado, fecha_nacimiento, telefono_empleado) VALUES('Angela Cordon', 'F', '01-06-1995', '12345678');
+INSERT INTO USER_ALL.EMPLEADO(nombre_empleado, sexo_empleado, fecha_nacimiento, telefono_empleado) VALUES('Carlos Monzon', 'M', '01-07-1996', '12345678');
+INSERT INTO USER_ALL.EMPLEADO(nombre_empleado, sexo_empleado, fecha_nacimiento, telefono_empleado) VALUES('Sara Aldana', 'F', '01-08-1997', '12345678');
+INSERT INTO USER_ALL.EMPLEADO(nombre_empleado, sexo_empleado, fecha_nacimiento, telefono_empleado) VALUES('Julio Mendez', 'M', '01-09-1998', '12345678');
+INSERT INTO USER_ALL.EMPLEADO(nombre_empleado, sexo_empleado, fecha_nacimiento, telefono_empleado) VALUES('Lucrecia Soto', 'F', '01-10-1999', '12345678');
+INSERT INTO USER_ALL.EMPLEADO(nombre_empleado, sexo_empleado, fecha_nacimiento, telefono_empleado) VALUES('Mateo Flores', 'M', '01-11-2000', '12345678');
+INSERT INTO USER_ALL.EMPLEADO(nombre_empleado, sexo_empleado, fecha_nacimiento, telefono_empleado) VALUES('Adriana Sanchez', 'F', '01-12-2001', '12345678');
+
+
+EXEC USER_ALL.INS_CARTELERA(1,1, TO_TIMESTAMP('01-01-00 7:00:00 AM'), TO_TIMESTAMP('01-01-00 10:17:00 AM'), '12-10-2020');
+EXEC USER_ALL.INS_CARTELERA(1,1, TO_TIMESTAMP('01-01-00 11:00:00 AM'), TO_TIMESTAMP('01-01-00 02:17:00 PM'), '13-10-2020');
+EXEC USER_ALL.INS_CARTELERA(1,1, TO_TIMESTAMP('01-01-00 8:00:00 AM'), TO_TIMESTAMP('01-01-00 11:17:00 AM'), '14-10-2020');
+EXEC USER_ALL.INS_CARTELERA(1,1, TO_TIMESTAMP('01-01-00 7:00:00 AM'), TO_TIMESTAMP('01-01-00 10:17:00 AM'), '15-10-2020');
+
+
+INSERT INTO USER_ALL.FACTURA (nit_emisor, nit_cliente) values (123456,160845);
+INSERT INTO USER_ALL.FACTURA (nit_emisor, nit_cliente) values (123456,548061);
+INSERT INTO USER_ALL.FACTURA (nit_emisor, nit_cliente) values (123456,123456);
+INSERT INTO USER_ALL.FACTURA (nit_emisor, nit_cliente) values (123456,789012);
+INSERT INTO USER_ALL.FACTURA (nit_emisor, nit_cliente) values (123456,345678);
+
+
+EXEC USER_ALL.INS_DETALLEFACTURA(41,22,2681,5,55);
+EXEC USER_ALL.INS_DETALLEFACTURA(42,22,2682,5,55);
+EXEC USER_ALL.INS_DETALLEFACTURA(43,22,2683,5,55);
+EXEC USER_ALL.INS_DETALLEFACTURA(44,22,2684,5,55);
+EXEC USER_ALL.INS_DETALLEFACTURA(45,22,2684,5,55);
+
+
+COMMIT;
+
+SELECT * FROM PELICULA;
+SELECT * FROM CARTELERA WHERE fecha BETWEEN '12-10-2020' AND '15-10-2020' AND ID_PELICULA_CARTELERA = 1 AND NUM_SALA_CARTELERA = 1 ORDER BY fecha;
+SELECT * FROM FACTURA;
+SELECT * FROM PROMOCION;
+SELECT * FROM DETALLE_FACTURA;

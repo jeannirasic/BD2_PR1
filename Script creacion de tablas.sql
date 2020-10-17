@@ -117,7 +117,7 @@ CREATE TABLE DETALLE_FACTURA(
 COMMIT;
 
 
-ALTER TABLE USER_ALL.SALA
+/*ALTER TABLE USER_ALL.SALA
   ADD columna_prueba varchar2(45);
 
 
@@ -126,7 +126,7 @@ ALTER TABLE USER_ALL.PELICULA
 
 SELECT * FROM USER_ALL.SALA;
 
-SELECT * FROM USER_ALL.PELICULA;
+SELECT * FROM USER_ALL.PELICULA;*/
 
 
 --ELIMINAR TABLAS---------------------------------------------------------------------------------------------------------------
@@ -148,3 +148,23 @@ DROP TABLE DETALLE_FACTURA;
 DROP TABLE FACTURA;
 DROP TABLE PROMOCION;
 */
+
+--TABLAS PRACTICA 3-------------------------------------------------------------------------------------------------------------
+CREATE TABLE DIA_FESTIVO(
+    id_dia_festivo NUMBER GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1) PRIMARY KEY,
+    nombre_dia_festivo VARCHAR(500) NOT NULL,
+    fecha_dia_festivo DATE NOT NULL
+);
+
+CREATE TABLE EMPLEADO(
+    id_empleado NUMBER GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1) PRIMARY KEY,
+    nombre_empleado VARCHAR(500) NOT NULL,
+    sexo_empleado CHAR(3) NOT NULL,
+    fecha_nacimiento DATE NOT NULL,
+    telefono_empleado VARCHAR(10) NOT NULL
+);
+
+
+COMMIT;
+
+
